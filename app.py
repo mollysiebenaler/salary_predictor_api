@@ -11,11 +11,12 @@ CORS(app)
 # main index page (root route)
 @app.route("/")
 def home():
-    return "<h1>Salary Prediction API</h1><p>BAIS:3300 - Digital Product Development</p><p>Molly Siebenaler</p>"
+    return "<h1>Salary Prediction API</h1><p>BAIS:3300 - Digital Product Management</p><p>Molly Siebenaler</p>"
 
 # predict route
 @app.route("/predict", methods=["POST"])
 def predict():
+    
     print("inside predict")
     
     # load the model
@@ -37,7 +38,7 @@ def predict():
 
     print(age, gender, country, highest_deg, coding_exp, title, company_size)
 
-    # make a prediction using the python varies
+    # make a prediction using the python variables
     # ensure the variables are in the same order as the model was trained on
     salary_prediction = model.predict(
         [
