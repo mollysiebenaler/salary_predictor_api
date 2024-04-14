@@ -37,7 +37,7 @@ def predict():
 
     print(age, gender, country, highest_deg, coding_exp, title, company_size)
 
-    # make a prediction using the python variables
+    # make a prediction using the python varies
     # ensure the variables are in the same order as the model was trained on
     salary_prediction = model.predict(
         [
